@@ -1,0 +1,17 @@
+{
+  "name": "firebase-tiktok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "firebase-admin": "^9.11.1",
+    "prettier": "^2.4.0"
+  }
+}

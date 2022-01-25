@@ -1,0 +1,51 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:react/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:prettier/recommended",
+      "prettier" // this two prettier rule set must be the last thing 
+    ],
+    "rules": {    // this is where we can turn on and off specific rules
+      "react/prop-types": 0,
+      "no-unused-vars": 0,
+      "import/no-unresolved": 0,
+      "jsx-a11y/label-has-associated-control": 0,
+      "jsx-a11y/alt-text": 0,
+      "no-useless-escape": 0,
+      "jsx-a11y/click-events-have-key-events": 0,
+      "jsx-a11y/no-static-element-interactions": 0,
+      "jsx-a11y/no-noninteractive-element-interactions": 0,
+      "no-console": 0,
+      "jsx-a11y/no-onchange": 0
+    },
+    "plugins": ["react", "import", "jsx-a11y"], // here we include the plugins as well, this is like new abilities for ESLint
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "babelOptions": {
+        "configFile": "./.babelrc"
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    },
+    "settings": {
+      "react": {
+        "version": "detect" // you have to tell eslint which version React are using, "detect" will say can you just figure out yourself (from package.json)
+      }
+    },
+    "globals": {
+      "jQuery": true,
+      "$": true,
+      "Promise": "readonly"
+    }
+  }
